@@ -1,0 +1,114 @@
+.orders-page {
+  padding: 30px 20px 60px;
+  max-width: 760px;
+}
+.orders-page h1 {
+  font-size: 1.5rem;
+  margin-bottom: 22px;
+}
+
+.orders-empty {
+  text-align: center;
+  padding: 80px 20px;
+  color: var(--color-text-muted);
+}
+.orders-empty p {
+  margin-bottom: 20px;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.order-card {
+  display: block;
+  padding: 18px 20px;
+}
+.order-card:hover {
+  box-shadow: var(--shadow-hover);
+}
+.order-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+.order-id {
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+.order-date {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.order-status {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 14px;
+  white-space: nowrap;
+}
+.order-status.pending {
+  background: rgba(255, 193, 69, 0.18);
+  color: #b87800;
+}
+.order-status.processing {
+  background: rgba(67, 71, 163, 0.12);
+  color: var(--color-secondary-light);
+}
+.order-status.shipped {
+  background: rgba(45, 156, 219, 0.14);
+  color: #1c7fb0;
+}
+.order-status.delivered {
+  background: rgba(26, 162, 96, 0.14);
+  color: var(--color-success);
+}
+.order-status.cancelled {
+  background: rgba(226, 62, 87, 0.12);
+  color: var(--color-danger);
+}
+
+.order-card-items {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.order-card-items img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  border-radius: 6px;
+  background: var(--color-bg);
+  padding: 4px;
+  border: 1px solid var(--color-border);
+}
+.order-more-items {
+  width: 52px;
+  height: 52px;
+  border-radius: 6px;
+  background: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+}
+
+.order-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  border-top: 1px solid var(--color-border);
+  padding-top: 12px;
+}
+.order-total {
+  font-weight: 700;
+  color: var(--color-text);
+}

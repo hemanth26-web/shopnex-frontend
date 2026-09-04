@@ -1,0 +1,169 @@
+.navbar {
+  background: linear-gradient(120deg, var(--color-secondary), var(--color-secondary-light));
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 14px rgba(43, 45, 110, 0.18);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 14px 20px;
+}
+
+.navbar-logo {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #fff;
+  white-space: nowrap;
+}
+.navbar-logo span {
+  color: var(--color-accent);
+}
+
+.navbar-search {
+  flex: 1;
+  display: flex;
+  background: #fff;
+  border-radius: 30px;
+  overflow: hidden;
+  max-width: 560px;
+}
+.navbar-search input {
+  flex: 1;
+  border: none;
+  padding: 11px 18px;
+  font-size: 0.92rem;
+  outline: none;
+}
+.navbar-search button {
+  background: var(--color-accent);
+  border: none;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  color: var(--color-secondary);
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-cart {
+  position: relative;
+  color: #fff;
+  display: flex;
+}
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  border-radius: 50%;
+  width: 19px;
+  height: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-login-btn {
+  padding: 9px 20px;
+}
+
+.navbar-user-menu {
+  position: relative;
+}
+.navbar-user-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+.navbar-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 110%;
+  background: #fff;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-popover);
+  min-width: 180px;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 10;
+}
+.navbar-user-menu:hover .navbar-dropdown,
+.navbar-user-menu:focus-within .navbar-dropdown {
+  display: flex;
+}
+.navbar-dropdown a,
+.navbar-dropdown button {
+  padding: 12px 18px;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+.navbar-dropdown a:hover,
+.navbar-dropdown button:hover {
+  background: var(--color-bg);
+}
+
+.navbar-mobile-toggle {
+  display: none;
+  background: none;
+  color: #fff;
+}
+
+.navbar-mobile-menu {
+  display: none;
+}
+
+@media (max-width: 860px) {
+  .navbar-search {
+    display: none;
+  }
+  .navbar-user-menu span,
+  .navbar-login-btn {
+    display: none;
+  }
+  .navbar-mobile-toggle {
+    display: flex;
+  }
+  .navbar-mobile-menu {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-secondary);
+    padding: 14px 20px 18px;
+    gap: 12px;
+  }
+  .navbar-mobile-menu input {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 20px;
+    border: none;
+  }
+  .navbar-mobile-menu a,
+  .navbar-mobile-menu button {
+    color: #fff;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 0.95rem;
+    padding: 6px 0;
+  }
+}
